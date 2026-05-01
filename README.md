@@ -51,12 +51,13 @@ Tables Included:
 # Verification Queries
 
 To verify the data was inserted correctly, you can run the following test query:
-SELECT 
+
+    SELECT 
     U.username AS Author, 
     P.caption AS Post, 
     C.comment_text AS Comment, 
     CU.username AS Commenter
-FROM USERS U
-JOIN POSTS P ON U.user_id = P.user_id
-JOIN COMMENTS C ON P.post_id = C.post_id
+    FROM USERS U
+    JOIN POSTS P ON U.user_id = P.user_id
+    JOIN COMMENTS C ON P.post_id = C.post_id
 JOIN USERS CU ON C.user_id = CU.user_id;
