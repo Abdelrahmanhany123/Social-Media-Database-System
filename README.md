@@ -60,4 +60,3 @@ To verify the data was inserted correctly, you can run the following test query:
     FROM USERS U
     JOIN POSTS P ON U.user_id = P.user_id
     JOIN COMMENTS C ON P.post_id = C.post_id
-JOIN USERS CU ON C.user_id = CU.user_id;
